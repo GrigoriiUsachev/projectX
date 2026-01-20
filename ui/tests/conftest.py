@@ -30,7 +30,7 @@ def driver():
         "profile.password_manager_enabled": False,
         "profile.default_content_setting_values.notifications": 2,
 
-        # Часто помогает именно против “breach/leak” подсказок
+        
         "safebrowsing.enabled": False,
         "safebrowsing.disable_download_protection": True,
     }
