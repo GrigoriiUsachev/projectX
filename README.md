@@ -1,3 +1,6 @@
+[![projectX CI](https://github.com/GrigoriiUsachev/projectX/actions/workflows/ci.yml/badge.svg)](
+https://github.com/GrigoriiUsachev/projectX/actions/workflows/ci.yml
+)
 # ProjectX — QA Automation Framework (UI + API)
 
 ProjectX is a Python-based test automation framework that includes:
