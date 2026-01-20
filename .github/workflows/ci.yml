@@ -30,12 +30,16 @@ jobs:
 
       - name: Run UI tests (headless)
         run: |
+          set +e
           pytest -m ui -q
           EXIT_CODE=$?
+          set -e
+
           if [ "$EXIT_CODE" -eq 5 ]; then
             echo "No UI tests collected, skipping UI step."
             exit 0
           fi
+
           exit "$EXIT_CODE"
 
       - name: Upload UI screenshots on failure
