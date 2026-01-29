@@ -1,116 +1,75 @@
-# ProjectX — Automated API & UI Testing Framework
-
-This project demonstrates how to build a **production-like automated testing framework**
-for **API and UI testing** using **Python, Pytest, Playwright, and CI/CD (GitHub Actions)**.
-
-The main focus areas are:
-- clean and maintainable test architecture
-- separation of API and UI layers
-- reproducible test runs
-- clear proof that tests are actually executed in CI
-
----
-
-## ✅ CI Proof (click-to-see)
-
-This repository is configured so that **tests are automatically executed on every push**.
-
-### 🔹 How to verify that everything works
-1. Click the CI badge below  
-2. Open the latest **successful run**
-3. Scroll down to **Artifacts** and download the HTML reports
-
-👉 This is a real CI execution, not mocks or screenshots.
-
 [![projectX CI](https://github.com/GrigoriiUsachev/projectX/actions/workflows/ci.yml/badge.svg)](https://github.com/GrigoriiUsachev/projectX/actions)
 
-### 📊 Test Reports (Artifacts)
-- `api-html-report` — API test execution report
-- `ui-html-report` — UI test execution report (Playwright)
 
-> HTML reports are generated automatically in GitHub Actions and attached to every workflow run.
+ProjectX — Automated API & UI Testing Framework
+This project demonstrates a production-like automated testing framework for API and UI testing using Python, Pytest, Playwright, and CI/CD with GitHub Actions.
+CI Proof (Click-to-See)
+All tests in this repository are executed automatically on every push via GitHub Actions.
 
----
+How to verify:
+1. Open the GitHub Actions page for this repository
+2. Select the latest successful workflow run
+3. Scroll down to Artifacts and download the HTML test reports
 
-## 🛠 Tech Stack
-
-**Language & Frameworks**
+This provides real proof that tests are executed in CI.
+Test Reports (Artifacts)
+- api-html-report — API test execution report
+- ui-html-report — UI test execution report (Playwright)
+Tech Stack
+Language & Frameworks:
 - Python 3.11
 - Pytest
 - Playwright
 
-**Testing**
+Testing:
 - API testing
 - UI testing
 - pytest-html reports
 
-**Infrastructure**
+Infrastructure:
 - GitHub Actions (CI)
 - Virtual environments
-- Cross-platform setup (Windows / macOS / Linux)
-
----
-
-## 📁 Project Structure
-
+- Cross-platform execution (Windows / macOS / Linux)
+Project Structure
 projectX/
-│
-├── api_tests/ # API test cases
-├── ui_tests/ # UI test cases (Playwright)
-├── config/ # Configuration files
-├── utils/ # Helpers and utilities
-│
-├── requirements.txt
-├── pytest.ini
-├── README.md
-└── .github/workflows/ci.yml
-
-
-## ▶️ Run Locally
-
-### 1️⃣ Clone the repository
-```bash
+ ├── api_tests/        API test cases
+ ├── ui_tests/         UI test cases
+ ├── config/           Configuration files
+ ├── utils/            Helper utilities
+ ├── requirements.txt
+ ├── pytest.ini
+ └── .github/workflows/ci.yml
+Run Locally
+1. Clone repository:
 git clone https://github.com/GrigoriiUsachev/projectX.git
 cd projectX
 
-Windows (PowerShell)
+2. Create virtual environment:
+Windows (PowerShell):
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
-macOS / Linux
+macOS / Linux:
 python3 -m venv .venv
 source .venv/bin/activate
 
-3️⃣ Install dependencies
+3. Install dependencies:
 pip install -r requirements.txt
 playwright install
-
-▶️ Run Tests
-Run all tests
+Run Tests
+Run all tests:
 pytest
 
-Run API tests only
+Run API tests only:
 pytest api_tests
 
-Run UI tests only
+Run UI tests only:
 pytest ui_tests
 
-Generate an HTML report locally
+Generate HTML report locally:
 pytest --html=report.html --self-contained-html
-
-🎯 Project Purpose
-
-This project is intended as a demonstration project to show:
-
-how a real-world test automation framework can be structured
-
-how CI pipelines are configured to run tests automatically
-
-how test results are documented using HTML reports
-
-how a test automation repository should look for code review and hiring processes
-
-👤 Author
-
+Project Purpose
+This project exists as a demonstration of how a real-world test automation framework can be structured, executed in CI, and presented for code review and hiring processes.
+Author
 Grigorii Usachev
 GitHub: https://github.com/GrigoriiUsachev
